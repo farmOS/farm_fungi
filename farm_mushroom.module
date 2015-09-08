@@ -96,3 +96,61 @@ function farm_mushroom_farm_taxonomy_breadcrumb($term) {
 
   return $breadcrumb;
 }
+
+/**
+ * Implements hook_farm_asset_view_views().
+ */
+function farm_mushroom_farm_asset_view_views($farm_asset) {
+
+  // If the entity is not a substrate, bail.
+  if ($farm_asset->type != 'substrate') {
+    return array();
+  }
+
+  // Return a list of Views to include on Substrates.
+  return array(
+    'farm_log_activity',
+    'farm_log_observation',
+    'farm_log_movement',
+  );
+}
+
+/**
+ * Implements hook_farm_taxonomy_term_view_views().
+ */
+function farm_mushroom_farm_taxonomy_term_view_views($term) {
+
+  // Start a list of View names.
+  $views = array();
+
+  // Switch logic depending on the vocabulary.
+  switch ($term->vocabulary_machine_name) {
+
+    // Farm areas:
+    case 'farm_areas':
+      $views[] = array(
+        'name' => 'farm_substrates',
+        'arg' => 1,
+        'weight' => 0,
+      );
+      break;
+
+    // Farm substrate types.
+    case 'farm_substrate_types':
+      $views[] = array(
+        'name' => 'farm_substrates',
+        'arg' => 2,
+      );
+      break;
+
+    // Farm mushroom species.
+    case 'farm_mushroom_species':
+      $views[] = array(
+        'name' => 'farm_substrates',
+        'arg' => 3,
+      );
+      break;
+  }
+
+  return $views;
+}
