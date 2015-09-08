@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Farm Mushroom feature.
+ */
+
+include_once 'farm_mushroom.features.inc';
