@@ -531,7 +531,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $handler->display->display_options['tab_options']['type'] = 'normal';
-  $handler->display->display_options['tab_options']['title'] = 'Substrates';
+  $handler->display->display_options['tab_options']['title'] = 'Mushrooms';
   $handler->display->display_options['tab_options']['weight'] = '10';
   $handler->display->display_options['tab_options']['name'] = 'farm';
   $export['farm_substrates'] = $view;
