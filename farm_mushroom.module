@@ -57,3 +57,42 @@ function farm_mushroom_farm_admin_actions() {
   );
   return $actions;
 }
+
+/**
+ * Implements hook_farm_asset_breadcrumb().
+ */
+function farm_mushroom_farm_asset_breadcrumb($farm_asset) {
+
+  // If the asset is a substrate, add a link to the substrates list.
+  $breadcrumb = array();
+  if ($farm_asset->type == 'substrate') {
+    $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
+  }
+  return $breadcrumb;
+}
+
+/**
+ * Implements hook_farm_taxonomy_breadcrumb().
+ */
+function farm_mushroom_farm_taxonomy_breadcrumb($term) {
+  $breadcrumb = array();
+
+  // Switch through available vocabularies.
+  switch ($term->vocabulary_machine_name) {
+
+    // If the term is in farm_mushroom_species...
+    case 'farm_mushroom_species':
+      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
+      $breadcrumb[] = l(t('Mushroom Species'), 'farm/substrates/mushroom-species');
+      break;
+
+    // If the term is in farm_substrate_types...
+    case 'farm_substrate_types':
+      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
+      $breadcrumb[] = l(t('Substrate Types'), 'farm/substrates/types');
+      break;
+
+  }
+
+  return $breadcrumb;
+}
