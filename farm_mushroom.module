@@ -23,3 +23,37 @@ function farm_mushroom_farm_manager_perms() {
   );
   return farm_manager_entity_perms($types);
 }
+
+/**
+ * Implements hook_farm_admin_actions().
+ */
+function farm_mushroom_farm_admin_actions() {
+
+  // Define actions.
+  $actions = array(
+    'mushroom_species' => array(
+      'title' => t('Add a mushroom species'),
+      'href' => 'admin/structure/taxonomy/farm_mushroom_species/add',
+      'paths' => array(
+        'farm/substrates',
+        'farm/substrates/mushroom-species',
+      ),
+    ),
+    'substrate' => array(
+      'title' => t('Add a substrate'),
+      'href' => 'farm/asset/add/substrate',
+      'views' => array(
+        'farm_substrates',
+      ),
+    ),
+    'substrate_types' => array(
+      'title' => t('Add a substrate type'),
+      'href' => 'admin/structure/taxonomy/farm_substrate_types/add',
+      'paths' => array(
+        'farm/substrates',
+        'farm/substrates/types',
+      ),
+    ),
+  );
+  return $actions;
+}
