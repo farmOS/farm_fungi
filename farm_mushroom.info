@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = filefield_paths
 dependencies[] = image
+dependencies[] = pathauto
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
