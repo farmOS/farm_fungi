@@ -5,3 +5,21 @@
  */
 
 include_once 'farm_mushroom.features.inc';
+
+/**
+ * Implements hook_farm_manager_perms().
+ */
+function farm_mushroom_farm_manager_perms() {
+
+  // Grant manager permissions to mushroom management features.
+  $types = array(
+    'farm_asset' => array(
+      'substrate',
+    ),
+    'taxonomy' => array(
+      'farm_mushroom_species',
+      'farm_substrate_types',
+    ),
+  );
+  return farm_manager_entity_perms($types);
+}
