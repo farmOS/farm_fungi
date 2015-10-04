@@ -103,12 +103,6 @@ function farm_mushroom_views_default_views() {
     'farm_mushroom_species' => 'farm_mushroom_species',
   );
   $handler->display->display_options['filters']['machine_name']['group'] = 1;
-  /* Filter criterion: Farm asset: Active */
-  $handler->display->display_options['filters']['active_1']['id'] = 'active_1';
-  $handler->display->display_options['filters']['active_1']['table'] = 'farm_asset';
-  $handler->display->display_options['filters']['active_1']['field'] = 'active';
-  $handler->display->display_options['filters']['active_1']['relationship'] = 'reverse_field_farm_mushroom_species_farm_asset';
-  $handler->display->display_options['filters']['active_1']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -214,12 +208,6 @@ function farm_mushroom_views_default_views() {
     'farm_substrate_types' => 'farm_substrate_types',
   );
   $handler->display->display_options['filters']['machine_name']['group'] = 1;
-  /* Filter criterion: Farm asset: Active */
-  $handler->display->display_options['filters']['active_1']['id'] = 'active_1';
-  $handler->display->display_options['filters']['active_1']['table'] = 'farm_asset';
-  $handler->display->display_options['filters']['active_1']['field'] = 'active';
-  $handler->display->display_options['filters']['active_1']['relationship'] = 'reverse_field_farm_substrate_type_farm_asset';
-  $handler->display->display_options['filters']['active_1']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
