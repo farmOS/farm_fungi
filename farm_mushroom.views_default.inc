@@ -13,7 +13,7 @@ function farm_mushroom_views_default_views() {
   $view = new view();
   $view->name = 'farm_mushroom_species';
   $view->description = '';
-  $view->tag = 'farm_crop';
+  $view->tag = 'farm_mushroom';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Farm Mushroom Species';
   $view->core = 7;
@@ -118,7 +118,7 @@ function farm_mushroom_views_default_views() {
   $view = new view();
   $view->name = 'farm_substrate_types';
   $view->description = '';
-  $view->tag = 'farm_crop';
+  $view->tag = 'farm_mushroom';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Farm Substrate Types';
   $view->core = 7;
@@ -223,7 +223,7 @@ function farm_mushroom_views_default_views() {
   $view = new view();
   $view->name = 'farm_substrates';
   $view->description = '';
-  $view->tag = 'farm_livestock';
+  $view->tag = 'farm_mushroom';
   $view->base_table = 'farm_asset';
   $view->human_name = 'Farm Mushroom Substrates';
   $view->core = 7;
