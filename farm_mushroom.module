@@ -200,7 +200,8 @@ function farm_mushroom_views_post_render(&$view, &$output, &$cache) {
 
       // Add the Substrates asset map to the top of the View.
       $map = \Drupal\openlayers\Openlayers::load('Map', 'farm_assets_substrate');
-      $output = drupal_render($map->build()) . $output;
+      $map_build = $map->build();
+      $output = drupal_render($map_build) . $output;
     }
   }
 }
