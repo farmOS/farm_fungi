@@ -16,7 +16,6 @@ This module depends on the following modules:
  * Entity API (http://drupal.org/project/entity)
  * Features (http://drupal.org/project/features)
  * Field Collection (http://drupal.org/project/field_collection)
- * Filefield Paths (http://drupal.org/project/filefield_paths)
  * Pathauto (http://drupal.org/project/pathauto)
  * Strongarm (http://drupal.org/project/strongarm)
  * Farm Asset (http://drupal.org/project/farm_asset)

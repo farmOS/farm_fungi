@@ -10,7 +10,6 @@ dependencies[] = farm_fields
 dependencies[] = farm_log
 dependencies[] = features
 dependencies[] = field_collection
-dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = pathauto
 dependencies[] = strongarm
