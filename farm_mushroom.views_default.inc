@@ -69,6 +69,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['fields']['tid_1']['table'] = 'taxonomy_term_data';
@@ -76,6 +77,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['tid_1']['relationship'] = 'parent';
   $handler->display->display_options['fields']['tid_1']['label'] = 'Parent Term ID';
   $handler->display->display_options['fields']['tid_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid_1']['separator'] = '';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -93,6 +95,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['id']['group_type'] = 'count';
   $handler->display->display_options['fields']['id']['label'] = '';
   $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['id']['separator'] = '';
   $handler->display->display_options['fields']['id']['prefix'] = '(';
   $handler->display->display_options['fields']['id']['suffix'] = ')';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -174,6 +177,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['fields']['tid_1']['table'] = 'taxonomy_term_data';
@@ -181,6 +185,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['tid_1']['relationship'] = 'parent';
   $handler->display->display_options['fields']['tid_1']['label'] = 'Parent Term ID';
   $handler->display->display_options['fields']['tid_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid_1']['separator'] = '';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -198,6 +203,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['id']['group_type'] = 'count';
   $handler->display->display_options['fields']['id']['label'] = '';
   $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['id']['separator'] = '';
   $handler->display->display_options['fields']['id']['prefix'] = '(';
   $handler->display->display_options['fields']['id']['suffix'] = ')';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
@@ -346,6 +352,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['id']['table'] = 'farm_asset';
   $handler->display->display_options['fields']['id']['field'] = 'id';
   $handler->display->display_options['fields']['id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['id']['separator'] = '';
   /* Field: Field: Photo(s) */
   $handler->display->display_options['fields']['field_farm_images']['id'] = 'field_farm_images';
   $handler->display->display_options['fields']['field_farm_images']['table'] = 'field_data_field_farm_images';
