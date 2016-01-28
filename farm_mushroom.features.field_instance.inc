@@ -10,7 +10,7 @@
 function farm_mushroom_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'farm_asset-substrate-field_farm_description'
+  // Exported field_instance: 'farm_asset-substrate-field_farm_description'.
   $field_instances['farm_asset-substrate-field_farm_description'] = array(
     'bundle' => 'substrate',
     'default_value' => NULL,
@@ -44,7 +44,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'farm_asset-substrate-field_farm_images'
+  // Exported field_instance: 'farm_asset-substrate-field_farm_images'.
   $field_instances['farm_asset-substrate-field_farm_images'] = array(
     'bundle' => 'substrate',
     'deleted' => 0,
@@ -94,7 +94,8 @@ function farm_mushroom_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'farm_asset-substrate-field_farm_mushroom_species'
+  // Exported field_instance:
+  // 'farm_asset-substrate-field_farm_mushroom_species'.
   $field_instances['farm_asset-substrate-field_farm_mushroom_species'] = array(
     'bundle' => 'substrate',
     'default_value' => NULL,
@@ -128,7 +129,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'farm_asset-substrate-field_farm_quantity'
+  // Exported field_instance: 'farm_asset-substrate-field_farm_quantity'.
   $field_instances['farm_asset-substrate-field_farm_quantity'] = array(
     'bundle' => 'substrate',
     'default_value' => NULL,
@@ -161,7 +162,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'farm_asset-substrate-field_farm_substrate_type'
+  // Exported field_instance: 'farm_asset-substrate-field_farm_substrate_type'.
   $field_instances['farm_asset-substrate-field_farm_substrate_type'] = array(
     'bundle' => 'substrate',
     'default_value' => NULL,
