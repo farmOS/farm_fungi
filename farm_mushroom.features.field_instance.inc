@@ -167,7 +167,7 @@ function farm_mushroom_field_default_field_instances() {
     'bundle' => 'substrate',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'What type of substrate is this?  Examples: Red Oak Logs, Sawdust, Agar, etc.  You can manage the list of available types in the <a href="/farm/substrates/types">Substrate Types</a> vocabulary.',
+    'description' => 'What type of substrate is this?  Examples: Red Oak Logs, Sawdust, Agar, etc.  You can manage the list of available types in the ' . l('Substrate Types', 'farm/substrates/types') . ' vocabulary.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
