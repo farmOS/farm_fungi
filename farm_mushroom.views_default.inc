@@ -49,7 +49,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<h4>Hierarchy <small>' . l('(change)', 'admin/structure/taxonomy/farm_mushroom_species', array('query' => array('destination' => 'farm/substrates/mushroom-species'))) . '</small></h4>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h4>Hierarchy <small>' . l('(change)', 'admin/structure/taxonomy/farm_mushroom_species', array('query' => array('destination' => 'farm/assets/substrates/mushroom-species'))) . '</small></h4>';
   /* No results behavior: Global: Unfiltered text */
   $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
@@ -109,7 +109,7 @@ function farm_mushroom_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'farm/substrates/mushroom-species';
+  $handler->display->display_options['path'] = 'farm/assets/substrates/mushroom-species';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Mushroom Species';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -157,7 +157,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<h4>Hierarchy <small>' . l('(change)', 'admin/structure/taxonomy/farm_substrate_types', array('query' => array('destination' => 'farm/substrates/types'))) . '</small></h4>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h4>Hierarchy <small>' . l('(change)', 'admin/structure/taxonomy/farm_substrate_types', array('query' => array('destination' => 'farm/assets/substrates/types'))) . '</small></h4>';
   /* No results behavior: Global: Unfiltered text */
   $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
@@ -217,7 +217,7 @@ function farm_mushroom_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'farm/substrates/types';
+  $handler->display->display_options['path'] = 'farm/assets/substrates/types';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Substrate Types';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -518,7 +518,7 @@ function farm_mushroom_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'farm/substrates/list';
+  $handler->display->display_options['path'] = 'farm/assets/substrates/list';
   $handler->display->display_options['menu']['type'] = 'default tab';
   $handler->display->display_options['menu']['title'] = 'Substrates';
   $handler->display->display_options['menu']['weight'] = '-10';

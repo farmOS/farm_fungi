@@ -52,8 +52,8 @@ function farm_mushroom_farm_admin_actions() {
       'title' => t('Add a mushroom species'),
       'href' => 'admin/structure/taxonomy/farm_mushroom_species/add',
       'paths' => array(
-        'farm/substrates',
-        'farm/substrates/mushroom-species',
+        'farm/assets/substrates',
+        'farm/assets/substrates/mushroom-species',
       ),
     ),
     'substrate' => array(
@@ -67,8 +67,8 @@ function farm_mushroom_farm_admin_actions() {
       'title' => t('Add a substrate type'),
       'href' => 'admin/structure/taxonomy/farm_substrate_types/add',
       'paths' => array(
-        'farm/substrates',
-        'farm/substrates/types',
+        'farm/assets/substrates',
+        'farm/assets/substrates/types',
       ),
     ),
   );
@@ -83,7 +83,8 @@ function farm_mushroom_farm_asset_breadcrumb($farm_asset) {
   // If the asset is a substrate, add a link to the substrates list.
   $breadcrumb = array();
   if ($farm_asset->type == 'substrate') {
-    $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
+    $breadcrumb[] = l(t('Assets'), 'farm/assets');
+    $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/assets/substrates');
   }
   return $breadcrumb;
 }
@@ -99,14 +100,16 @@ function farm_mushroom_farm_taxonomy_breadcrumb($term) {
 
     // If the term is in farm_mushroom_species...
     case 'farm_mushroom_species':
-      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
-      $breadcrumb[] = l(t('Mushroom Species'), 'farm/substrates/mushroom-species');
+      $breadcrumb[] = l(t('Assets'), 'farm/assets');
+      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/assets/substrates');
+      $breadcrumb[] = l(t('Mushroom Species'), 'farm/assets/substrates/mushroom-species');
       break;
 
     // If the term is in farm_substrate_types...
     case 'farm_substrate_types':
-      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/substrates');
-      $breadcrumb[] = l(t('Substrate Types'), 'farm/substrates/types');
+      $breadcrumb[] = l(t('Assets'), 'farm/assets');
+      $breadcrumb[] = l(t('Mushroom Substrates'), 'farm/assets/substrates');
+      $breadcrumb[] = l(t('Substrate Types'), 'farm/assets/substrates/types');
       break;
 
   }
