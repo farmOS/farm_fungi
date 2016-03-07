@@ -409,7 +409,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['field'] = 'field_farm_move_to_tid';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['relationship'] = 'latest_movement';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_farm_move_to_tid']['title'] = 'Animals in %1';
+  $handler->display->display_options['arguments']['field_farm_move_to_tid']['title'] = 'Mushrooms in %1';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['summary']['format'] = 'default_summary';
