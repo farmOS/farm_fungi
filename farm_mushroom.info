@@ -8,6 +8,7 @@ dependencies[] = entity
 dependencies[] = farm_asset
 dependencies[] = farm_fields
 dependencies[] = farm_log
+dependencies[] = farm_quantity
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = image
