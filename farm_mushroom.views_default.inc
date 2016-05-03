@@ -478,6 +478,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['label'] = 'Mushroom Species';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['operator'] = 'field_farm_mushroom_species_tid_op';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['identifier'] = 'field_farm_mushroom_species_tid';
+  $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['vocabulary'] = 'farm_mushroom_species';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['hierarchy'] = 1;
@@ -491,6 +492,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate Type';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['operator'] = 'field_farm_substrate_type_tid_op';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['identifier'] = 'field_farm_substrate_type_tid';
+  $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['vocabulary'] = 'farm_substrate_types';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['hierarchy'] = 1;
