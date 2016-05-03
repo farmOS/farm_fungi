@@ -13,7 +13,7 @@ function farm_mushroom_taxonomy_default_vocabularies() {
       'name' => 'Farm Mushroom Species',
       'machine_name' => 'farm_mushroom_species',
       'description' => 'A vocabulary of mushroom species.',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
