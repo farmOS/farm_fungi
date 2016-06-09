@@ -112,6 +112,26 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'farm';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['farm_mushroom_species'] = array(
+    t('Master'),
+    t('Mushroom Species'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<h4>Hierarchy <small><a href="/admin/structure/taxonomy/farm_mushroom_species?destination=farm/assets/substrates/mushroom-species">(change)</a></small></h4>'),
+    t('No mushroom species found.'),
+    t('Parent'),
+    t('field_farm_mushroom_species'),
+    t('Term ID'),
+    t('.'),
+    t('Parent Term ID'),
+    t('('),
+    t(')'),
+    t('Page'),
+  );
   $export['farm_mushroom_species'] = $view;
 
   $view = new view();
@@ -216,6 +236,26 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'farm';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['farm_substrate_types'] = array(
+    t('Master'),
+    t('Substrate Types'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<h4>Hierarchy <small><a href="/admin/structure/taxonomy/farm_substrate_types?destination=farm/assets/substrates/types">(change)</a></small></h4>'),
+    t('No substrate types found.'),
+    t('Parent'),
+    t('field_farm_substrate_type'),
+    t('Term ID'),
+    t('.'),
+    t('Parent Term ID'),
+    t('('),
+    t(')'),
+    t('Page'),
+  );
   $export['farm_substrate_types'] = $view;
 
   $view = new view();
@@ -536,6 +576,40 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['tab_options']['title'] = 'Mushrooms';
   $handler->display->display_options['tab_options']['weight'] = '10';
   $handler->display->display_options['tab_options']['name'] = 'farm';
+  $translatables['farm_substrates'] = array(
+    t('Master'),
+    t('Mushroom Substrates'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('No mushroom substrates found.'),
+    t('Latest movement'),
+    t('Farm asset'),
+    t('- Choose an operation -'),
+    t('Farm asset ID'),
+    t('.'),
+    t('Name'),
+    t('Mushroom Species'),
+    t('Substrate Type'),
+    t('Substrate Quantity'),
+    t('Location'),
+    t('All'),
+    t('Mushrooms in %1'),
+    t('Substrates of type %2'),
+    t('Substrates of species %3'),
+    t('Active'),
+    t('Page'),
+  );
   $export['farm_substrates'] = $view;
 
   return $export;
