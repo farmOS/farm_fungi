@@ -18,6 +18,8 @@ This module depends on the following modules:
  * Field Collection (http://drupal.org/project/field_collection)
  * Pathauto (http://drupal.org/project/pathauto)
  * Strongarm (http://drupal.org/project/strongarm)
+ * Views (http://drupal.org/project/views)
+ * Views Tree (http://drupal.org/project/views_tree)
  * Farm Asset (http://drupal.org/project/farm_asset)
  * Farm Fields (http://drupal.org/project/farm_fields)
  * Farm Log (http://drupal.org/project/farm_log)
