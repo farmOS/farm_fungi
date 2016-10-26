@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = farm_asset
+dependencies[] = farm_asset_children
 dependencies[] = farm_fields
 dependencies[] = farm_log
 dependencies[] = farm_quantity
