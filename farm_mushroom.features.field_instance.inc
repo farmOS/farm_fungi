@@ -22,7 +22,7 @@ function farm_mushroom_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'farm_asset',
@@ -40,7 +40,7 @@ function farm_mushroom_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -64,7 +64,7 @@ function farm_mushroom_field_default_field_instances() {
           'colorbox_node_style_first' => 'large',
         ),
         'type' => 'colorbox',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'farm_asset',
@@ -90,7 +90,7 @@ function farm_mushroom_field_default_field_instances() {
         'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -126,6 +126,43 @@ function farm_mushroom_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'farm_asset-substrate-field_farm_parent'.
+  $field_instances['farm_asset-substrate-field_farm_parent'] = array(
+    'bundle' => 'substrate',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Specify the parent(s) of this substrate.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'farm_asset',
+    'field_name' => 'field_farm_parent',
+    'label' => 'Parent(s)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 256,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
     ),
   );
 
@@ -201,8 +238,10 @@ function farm_mushroom_field_default_field_instances() {
   t('Describe the quantity of this substrate. For example: 16 logs, or 50 lbs.');
   t('Description');
   t('Mushroom Species');
+  t('Parent(s)');
   t('Photo(s)');
   t('Quantity');
+  t('Specify the parent(s) of this substrate.');
   t('Substrate Type');
   t('What species of mushroom will be grown on this substrate? As you type, you will have the option of selecting from species that you\'ve entered in the past.');
   t('What type of substrate is this?  Examples: Red Oak Logs, Sawdust, Agar, etc.  You can manage the list of available types in the ' . l('Substrate Types', '/farm/assets/substrates/types') . ' vocabulary.');
