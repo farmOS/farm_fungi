@@ -610,6 +610,7 @@ function farm_mushroom_views_default_views() {
     t('Substrates of species %3'),
     t('Active'),
     t('Page'),
+  );
 
   /* Display: Data export */
   $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
