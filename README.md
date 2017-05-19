@@ -14,6 +14,8 @@ This module depends on the following modules:
  * Colorbox (http://drupal.org/project/colorbox)
  * Ctools (http://drupal.org/project/ctools)
  * Entity API (http://drupal.org/project/entity)
+ * Entity Reference (http://drupal.org/project/entityreference)
+ * Entity Reference View Widget (http://drupal.org/project/entityreference_view_widget)
  * Features (http://drupal.org/project/features)
  * Field Collection (http://drupal.org/project/field_collection)
  * Field Group (http://drupal.org/project/field_group)
