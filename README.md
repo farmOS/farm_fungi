@@ -16,6 +16,7 @@ This module depends on the following modules:
  * Entity API (http://drupal.org/project/entity)
  * Features (http://drupal.org/project/features)
  * Field Collection (http://drupal.org/project/field_collection)
+ * Multiupload Imagefield Widget (http://drupal.org/project/multiupload_imagefield_widget)
  * Pathauto (http://drupal.org/project/pathauto)
  * Strongarm (http://drupal.org/project/strongarm)
  * Views (http://drupal.org/project/views)

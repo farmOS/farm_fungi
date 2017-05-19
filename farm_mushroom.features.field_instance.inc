@@ -47,6 +47,7 @@ function farm_mushroom_field_default_field_instances() {
   // Exported field_instance: 'farm_asset-substrate-field_farm_images'.
   $field_instances['farm_asset-substrate-field_farm_images'] = array(
     'bundle' => 'substrate',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -84,12 +85,12 @@ function farm_mushroom_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'bar',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 6,
     ),
   );
