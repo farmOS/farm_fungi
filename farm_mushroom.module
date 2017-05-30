@@ -249,3 +249,12 @@ function farm_mushroom_views_post_render(&$view, &$output, &$cache) {
     }
   }
 }
+
+/**
+ * Implements hook_farm_log_categories().
+ */
+function farm_mushroom_farm_log_categories() {
+
+  // Provide an "Mushrooms" log category.
+  return array('Mushrooms');
+}
