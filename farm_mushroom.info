@@ -1,7 +1,7 @@
 name = Farm Mushroom
 description = Features for managing mushroom production.
 core = 7.x
-package = farmOS
+package = farmOS Contrib
 dependencies[] = colorbox
 dependencies[] = ctools
 dependencies[] = entity
