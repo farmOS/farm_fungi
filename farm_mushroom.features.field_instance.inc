@@ -106,7 +106,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
     'entity_type' => 'farm_asset',
     'field_name' => 'field_farm_images',
-    'label' => 'Photo(s)',
+    'label' => 'Photos',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -282,7 +282,7 @@ function farm_mushroom_field_default_field_instances() {
   t('Files');
   t('Mushroom Species');
   t('Parent(s)');
-  t('Photo(s)');
+  t('Photos');
   t('Quantity');
   t('Specify the parent(s) of this substrate.');
   t('Substrate Type');
