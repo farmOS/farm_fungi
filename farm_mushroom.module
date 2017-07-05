@@ -74,3 +74,22 @@ function farm_mushroom_feeds_importer_default_alter(&$importers) {
     $importer_mappings = array_merge($importer_mappings, $mappings);
   }
 }
+
+/**
+ * Implements hook_feeds_tamper_default_alter().
+ */
+function farm_mushroom_feeds_tamper_default_alter(&$feeds_tampers) {
+
+  // If farm_import is not installed, bail.
+  if (!module_exists('farm_import')) {
+    return;
+  }
+
+  // Make species required.
+  $feeds_tamper = farm_import_feeds_tamper_plugin('farm_asset', 'substrate', 'Species', 'required');
+  $feeds_tampers[$feeds_tamper->id] = $feeds_tamper;
+
+  // Make substrate required.
+  $feeds_tamper = farm_import_feeds_tamper_plugin('farm_asset', 'substrate', 'Substrate', 'required');
+  $feeds_tampers[$feeds_tamper->id] = $feeds_tamper;
+}
