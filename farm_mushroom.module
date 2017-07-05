@@ -49,7 +49,7 @@ function farm_mushroom_farm_log_categories() {
 /**
  * Implements hook_feeds_importer_default_alter().
  */
-function farm_mushroom_feeds_importer_default_alter($importers) {
+function farm_mushroom_feeds_importer_default_alter(&$importers) {
 
   // Add extra field mappings to mushroom substrates.
   $name = 'farm_asset_substrate';
