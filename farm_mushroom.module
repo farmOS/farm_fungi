@@ -45,3 +45,32 @@ function farm_mushroom_farm_log_categories() {
   // Provide an "Mushrooms" log category.
   return array('Mushrooms');
 }
+
+/**
+ * Implements hook_feeds_importer_default_alter().
+ */
+function farm_mushroom_feeds_importer_default_alter($importers) {
+
+  // Add extra field mappings to mushroom substrates.
+  $name = 'farm_asset_substrate';
+  if (!empty($importers[$name])) {
+    $mappings = array(
+      array(
+        'source' => 'Species',
+        'target' => 'field_farm_mushroom_species',
+        'term_search' => '0',
+        'autocreate' => 1,
+        'language' => 'und',
+      ),
+      array(
+        'source' => 'Substrate',
+        'target' => 'field_farm_substrate_type',
+        'term_search' => '0',
+        'autocreate' => 1,
+        'language' => 'und',
+      ),
+    );
+    $importer_mappings =& $importers[$name]->config['processor']['config']['mappings'];
+    $importer_mappings = array_merge($importer_mappings, $mappings);
+  }
+}
