@@ -149,7 +149,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
     'entity_type' => 'farm_asset',
     'field_name' => 'field_farm_mushroom_species',
-    'label' => 'Mushroom Species',
+    'label' => 'Mushroom species',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -258,7 +258,7 @@ function farm_mushroom_field_default_field_instances() {
     ),
     'entity_type' => 'farm_asset',
     'field_name' => 'field_farm_substrate_type',
-    'label' => 'Substrate Type',
+    'label' => 'Substrate type',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -280,12 +280,12 @@ function farm_mushroom_field_default_field_instances() {
   t('Describe the quantity of this substrate. For example: 16 logs, or 50 lbs.');
   t('Description');
   t('Files');
-  t('Mushroom Species');
+  t('Mushroom species');
   t('Parent(s)');
   t('Photos');
   t('Quantity');
   t('Specify the parent(s) of this substrate.');
-  t('Substrate Type');
+  t('Substrate type');
   t('What species of mushroom will be grown on this substrate? As you type, you will have the option of selecting from species that you\'ve entered in the past.');
   t('What type of substrate is this?  Examples: Red Oak Logs, Sawdust, Agar, etc.  You can manage the list of available types in the ' . l('Substrate Types', '/farm/assets/substrates/types') . ' vocabulary.');
 

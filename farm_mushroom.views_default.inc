@@ -56,7 +56,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['relationships']['parent']['id'] = 'parent';
   $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
-  /* Relationship: Taxonomy term: Farm asset using Mushroom Species */
+  /* Relationship: Taxonomy term: Farm asset using Mushroom species */
   $handler->display->display_options['relationships']['reverse_field_farm_mushroom_species_farm_asset']['id'] = 'reverse_field_farm_mushroom_species_farm_asset';
   $handler->display->display_options['relationships']['reverse_field_farm_mushroom_species_farm_asset']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_farm_mushroom_species_farm_asset']['field'] = 'reverse_field_farm_mushroom_species_farm_asset';
@@ -180,7 +180,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['relationships']['parent']['id'] = 'parent';
   $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
-  /* Relationship: Taxonomy term: Farm asset using Substrate Type */
+  /* Relationship: Taxonomy term: Farm asset using Substrate type */
   $handler->display->display_options['relationships']['reverse_field_farm_substrate_type_farm_asset']['id'] = 'reverse_field_farm_substrate_type_farm_asset';
   $handler->display->display_options['relationships']['reverse_field_farm_substrate_type_farm_asset']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_farm_substrate_type_farm_asset']['field'] = 'reverse_field_farm_substrate_type_farm_asset';
@@ -403,11 +403,11 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path'] = 'farm/asset/[id]';
-  /* Field: Farm asset: Mushroom Species */
+  /* Field: Farm asset: Mushroom species */
   $handler->display->display_options['fields']['field_farm_mushroom_species']['id'] = 'field_farm_mushroom_species';
   $handler->display->display_options['fields']['field_farm_mushroom_species']['table'] = 'field_data_field_farm_mushroom_species';
   $handler->display->display_options['fields']['field_farm_mushroom_species']['field'] = 'field_farm_mushroom_species';
-  /* Field: Farm asset: Substrate Type */
+  /* Field: Farm asset: Substrate type */
   $handler->display->display_options['fields']['field_farm_substrate_type']['id'] = 'field_farm_substrate_type';
   $handler->display->display_options['fields']['field_farm_substrate_type']['table'] = 'field_data_field_farm_substrate_type';
   $handler->display->display_options['fields']['field_farm_substrate_type']['field'] = 'field_farm_substrate_type';
@@ -432,18 +432,18 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['sorts']['name']['field'] = 'name';
   $handler->display->display_options['sorts']['name']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['name']['expose']['label'] = 'Name';
-  /* Sort criterion: Farm asset: Mushroom Species (field_farm_mushroom_species) */
+  /* Sort criterion: Farm asset: Mushroom species (field_farm_mushroom_species) */
   $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['id'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['table'] = 'field_data_field_farm_mushroom_species';
   $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['field'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['expose']['label'] = 'Mushroom Species';
-  /* Sort criterion: Farm asset: Substrate Type (field_farm_substrate_type) */
+  $handler->display->display_options['sorts']['field_farm_mushroom_species_tid']['expose']['label'] = 'Mushroom species';
+  /* Sort criterion: Farm asset: Substrate type (field_farm_substrate_type) */
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['id'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['table'] = 'field_data_field_farm_substrate_type';
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['field'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate Type';
+  $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate type';
   /* Contextual filter: Field collection item: Movement to (field_farm_move_to) */
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['id'] = 'field_farm_move_to_tid';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['table'] = 'field_data_field_farm_move_to';
@@ -460,7 +460,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['validate_options']['vocabularies'] = array(
     'farm_areas' => 'farm_areas',
   );
-  /* Contextual filter: Farm asset: Substrate Type (field_farm_substrate_type) */
+  /* Contextual filter: Farm asset: Substrate type (field_farm_substrate_type) */
   $handler->display->display_options['arguments']['field_farm_substrate_type_tid']['id'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['arguments']['field_farm_substrate_type_tid']['table'] = 'field_data_field_farm_substrate_type';
   $handler->display->display_options['arguments']['field_farm_substrate_type_tid']['field'] = 'field_farm_substrate_type_tid';
@@ -475,7 +475,7 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['arguments']['field_farm_substrate_type_tid']['validate_options']['vocabularies'] = array(
     'farm_substrate_types' => 'farm_substrate_types',
   );
-  /* Contextual filter: Farm asset: Mushroom Species (field_farm_mushroom_species) */
+  /* Contextual filter: Farm asset: Mushroom species (field_farm_mushroom_species) */
   $handler->display->display_options['arguments']['field_farm_mushroom_species_tid']['id'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['arguments']['field_farm_mushroom_species_tid']['table'] = 'field_data_field_farm_mushroom_species';
   $handler->display->display_options['arguments']['field_farm_mushroom_species_tid']['field'] = 'field_farm_mushroom_species_tid';
@@ -509,28 +509,28 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['filters']['name']['expose']['label'] = 'Name';
   $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
   $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
-  /* Filter criterion: Farm asset: Mushroom Species (field_farm_mushroom_species) */
+  /* Filter criterion: Farm asset: Mushroom species (field_farm_mushroom_species) */
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['id'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['table'] = 'field_data_field_farm_mushroom_species';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['field'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['operator_id'] = 'field_farm_mushroom_species_tid_op';
-  $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['label'] = 'Mushroom Species';
+  $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['label'] = 'Mushroom species';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['operator'] = 'field_farm_mushroom_species_tid_op';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['identifier'] = 'field_farm_mushroom_species_tid';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['vocabulary'] = 'farm_mushroom_species';
   $handler->display->display_options['filters']['field_farm_mushroom_species_tid']['hierarchy'] = 1;
-  /* Filter criterion: Farm asset: Substrate Type (field_farm_substrate_type) */
+  /* Filter criterion: Farm asset: Substrate type (field_farm_substrate_type) */
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['id'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['table'] = 'field_data_field_farm_substrate_type';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['field'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['operator_id'] = 'field_farm_substrate_type_tid_op';
-  $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate Type';
+  $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate type';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['operator'] = 'field_farm_substrate_type_tid_op';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['identifier'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['filters']['field_farm_substrate_type_tid']['expose']['multiple'] = TRUE;
@@ -620,8 +620,8 @@ function farm_mushroom_views_default_views() {
     t('Asset ID'),
     t('.'),
     t('Name'),
-    t('Mushroom Species'),
-    t('Substrate Type'),
+    t('Mushroom species'),
+    t('Substrate type'),
     t('Substrate Quantity'),
     t('Location'),
     t('All'),
