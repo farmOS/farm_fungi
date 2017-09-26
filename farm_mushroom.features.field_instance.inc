@@ -40,7 +40,7 @@ function farm_mushroom_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => -7,
     ),
   );
 
@@ -162,7 +162,7 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 2,
+      'weight' => -9,
     ),
   );
 
@@ -271,7 +271,7 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 3,
+      'weight' => -8,
     ),
   );
 
