@@ -27,7 +27,6 @@ This module depends on the following modules:
  * Views Tree (http://drupal.org/project/views_tree)
  * Farm Asset (http://drupal.org/project/farm_asset)
  * Farm Fields (http://drupal.org/project/farm_fields)
- * Farm Log (http://drupal.org/project/farm_log)
  * Farm Quantity (http://drupal.org/project/farm_quantity)
 
 INSTALLATION

@@ -23,6 +23,7 @@ function farm_mushroom_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Mushroom Species';
+  $handler->display->display_options['css_class'] = 'views-tree';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -147,6 +148,7 @@ function farm_mushroom_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Substrate Types';
+  $handler->display->display_options['css_class'] = 'views-tree';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -293,6 +295,7 @@ function farm_mushroom_views_default_views() {
     'field_farm_substrate_type' => 'field_farm_substrate_type',
     'field_farm_quantity' => 'field_farm_quantity',
     'field_farm_description' => 'field_farm_description',
+    'field_farm_group' => 'field_farm_group',
     'field_farm_move_to' => 'field_farm_move_to',
     'active' => 'active',
   );
@@ -337,8 +340,6 @@ function farm_mushroom_views_default_views() {
       'empty_column' => 0,
     ),
     'field_farm_quantity' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -346,6 +347,11 @@ function farm_mushroom_views_default_views() {
     'field_farm_description' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_farm_group' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -374,6 +380,10 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['relationships']['latest_movement']['id'] = 'latest_movement';
   $handler->display->display_options['relationships']['latest_movement']['table'] = 'farm_asset';
   $handler->display->display_options['relationships']['latest_movement']['field'] = 'latest_movement';
+  /* Relationship: Farm asset: Group membership */
+  $handler->display->display_options['relationships']['membership']['id'] = 'membership';
+  $handler->display->display_options['relationships']['membership']['table'] = 'farm_asset';
+  $handler->display->display_options['relationships']['membership']['field'] = 'membership';
   /* Field: Bulk operations: Farm asset */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_farm_asset';
@@ -384,9 +394,28 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
-    'action::farm_log_movement_asset_move_action' => array(
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'skip_permission_check' => 0,
+      'override_label' => 1,
+      'label' => 'Delete',
+      'settings' => array(
+        'log' => 0,
+      ),
+    ),
+    'action::farm_group_asset_membership_action' => array(
+      'selected' => 1,
+      'skip_confirmation' => 0,
+      'skip_permission_check' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::farm_movement_asset_move_action' => array(
       'selected' => 1,
       'skip_confirmation' => 1,
+      'skip_permission_check' => 0,
       'override_label' => 0,
       'label' => '',
     ),
@@ -441,6 +470,16 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['fields']['field_farm_description']['alter']['max_length'] = '140';
   $handler->display->display_options['fields']['field_farm_description']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_farm_description']['alter']['trim'] = TRUE;
+  /* Field: Field collection item: Group */
+  $handler->display->display_options['fields']['field_farm_group']['id'] = 'field_farm_group';
+  $handler->display->display_options['fields']['field_farm_group']['table'] = 'field_data_field_farm_group';
+  $handler->display->display_options['fields']['field_farm_group']['field'] = 'field_farm_group';
+  $handler->display->display_options['fields']['field_farm_group']['relationship'] = 'membership';
+  $handler->display->display_options['fields']['field_farm_group']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 1,
+  );
+  $handler->display->display_options['fields']['field_farm_group']['delta_offset'] = '0';
   /* Field: Field collection item: Movement to */
   $handler->display->display_options['fields']['field_farm_move_to']['id'] = 'field_farm_move_to';
   $handler->display->display_options['fields']['field_farm_move_to']['table'] = 'field_data_field_farm_move_to';
@@ -641,8 +680,10 @@ function farm_mushroom_views_default_views() {
     t('last »'),
     t('No mushroom substrates found.'),
     t('Latest movement'),
+    t('Group membership'),
     t('Farm asset'),
     t('- Choose an operation -'),
+    t('Delete'),
     t('Asset ID'),
     t('.'),
     t('Name'),
@@ -650,6 +691,7 @@ function farm_mushroom_views_default_views() {
     t('Substrate type'),
     t('Substrate Quantity'),
     t('Description'),
+    t('Group'),
     t('Location'),
     t('Active'),
     t('All'),
