@@ -22,7 +22,7 @@ function farm_mushroom_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'farm_asset',
@@ -40,7 +40,7 @@ function farm_mushroom_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => -7,
     ),
   );
 
@@ -55,7 +55,7 @@ function farm_mushroom_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_table',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'farm_asset',
@@ -80,6 +80,37 @@ function farm_mushroom_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'farm_asset-substrate-field_farm_flags'.
+  $field_instances['farm_asset-substrate-field_farm_flags'] = array(
+    'bundle' => 'substrate',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add flags to this asset to enable better sorting and filtering of records.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'farm_asset',
+    'field_name' => 'field_farm_flags',
+    'label' => 'Flags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => -6,
+    ),
+  );
+
   // Exported field_instance: 'farm_asset-substrate-field_farm_images'.
   $field_instances['farm_asset-substrate-field_farm_images'] = array(
     'bundle' => 'substrate',
@@ -101,7 +132,7 @@ function farm_mushroom_field_default_field_instances() {
           'colorbox_node_style_first' => 'large',
         ),
         'type' => 'colorbox',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'farm_asset',
@@ -162,7 +193,7 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 1,
+      'weight' => -9,
     ),
   );
 
@@ -271,15 +302,17 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 2,
+      'weight' => -8,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add flags to this asset to enable better sorting and filtering of records.');
   t('Describe the quantity of this substrate. For example: 16 logs, or 50 lbs.');
   t('Description');
   t('Files');
+  t('Flags');
   t('Mushroom species');
   t('Parent(s)');
   t('Photos');

@@ -54,7 +54,8 @@ function farm_mushroom_field_group_info() {
       0 => 'field_farm_description',
       1 => 'field_farm_mushroom_species',
       2 => 'field_farm_substrate_type',
-      3 => 'name',
+      3 => 'field_farm_flags',
+      4 => 'name',
     ),
     'format_type' => 'field_group_easy_responsive_tabs_nav_item',
     'format_settings' => array(
