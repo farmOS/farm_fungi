@@ -543,6 +543,13 @@ function farm_mushroom_views_default_views() {
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['field'] = 'field_farm_substrate_type_tid';
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['field_farm_substrate_type_tid']['expose']['label'] = 'Substrate type';
+  /* Sort criterion: Farm asset: Farm asset ID */
+  $handler->display->display_options['sorts']['id']['id'] = 'id';
+  $handler->display->display_options['sorts']['id']['table'] = 'farm_asset';
+  $handler->display->display_options['sorts']['id']['field'] = 'id';
+  $handler->display->display_options['sorts']['id']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['id']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['id']['expose']['label'] = 'Asset ID';
   /* Contextual filter: Field collection item: Movement to (field_farm_move_to) */
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['id'] = 'field_farm_move_to_tid';
   $handler->display->display_options['arguments']['field_farm_move_to_tid']['table'] = 'field_data_field_farm_move_to';
