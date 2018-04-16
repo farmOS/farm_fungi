@@ -40,7 +40,7 @@ function farm_mushroom_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -7,
+      'weight' => 3,
     ),
   );
 
@@ -107,7 +107,7 @@ function farm_mushroom_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => -6,
+      'weight' => 4,
     ),
   );
 
@@ -193,7 +193,7 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => -9,
+      'weight' => 1,
     ),
   );
 
@@ -302,7 +302,7 @@ function farm_mushroom_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => -8,
+      'weight' => 2,
     ),
   );
 
