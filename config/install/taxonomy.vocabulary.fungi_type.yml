@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - farm_fungi
+name: Fungi types
+vid: fungi_type
+description: 'A list of fungi species/varieties.'
+weight: 0
