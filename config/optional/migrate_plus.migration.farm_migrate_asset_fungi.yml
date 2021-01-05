@@ -28,6 +28,15 @@ process:
   id:
     plugin: get
     source: id
+  # Fungi specific fields.
+  fungi_type:
+    plugin: sub_process
+    source: field_farm_crop
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: farm_migrate_taxonomy_fungi_type
+        source: tid
 migration_dependencies:
   required: {  }
   optional: {  }
