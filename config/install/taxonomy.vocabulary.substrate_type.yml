@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - farm_fungi
+name: Fungi substrate types
+vid: substrate_type
+description: 'A list of fungi substrate types.'
+weight: 0
