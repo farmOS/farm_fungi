@@ -37,7 +37,16 @@ process:
         plugin: migration_lookup
         migration: farm_migrate_taxonomy_fungi_type
         source: tid
+  substrate_type:
+    plugin: sub_process
+    source: field_farm_substrate_type
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: farm_migrate_taxonomy_substrate_type
+        source: tid
 migration_dependencies:
   required:
     - farm_migrate_taxonomy_fungi_type
+    - farm_migrate_taxonomy_substrate_type
   optional: {  }

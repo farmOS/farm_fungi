@@ -33,6 +33,18 @@ class Fungi extends FarmAssetType {
           'view' => -90,
         ],
       ],
+      'substrate_type' => [
+        'type' => 'entity_reference',
+        'label' => $this->t('Substrate type'),
+        'description' => 'Enter the type of substrate this fungi is growing on.',
+        'target_type' => 'taxonomy_term',
+        'target_bundle' => 'substrate_type',
+        'auto_create' => TRUE,
+        'weight' => [
+          'form' => -85,
+          'view' => -85,
+        ],
+      ],
     ];
     foreach ($field_info as $name => $info) {
       $fields[$name] = $this->farmFieldFactory->bundleFieldDefinition($info);
