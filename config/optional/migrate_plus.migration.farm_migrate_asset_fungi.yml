@@ -31,12 +31,13 @@ process:
   # Fungi specific fields.
   fungi_type:
     plugin: sub_process
-    source: field_farm_crop
+    source: field_farm_mushroom_species
     process:
       target_id:
         plugin: migration_lookup
         migration: farm_migrate_taxonomy_fungi_type
         source: tid
 migration_dependencies:
-  required: {  }
+  required:
+    - farm_migrate_taxonomy_fungi_type
   optional: {  }
