@@ -15,7 +15,7 @@ class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
 cck_plugin_method: null
 source:
-  plugin: d7_asset
+  plugin: d7_farm_fungi_asset
   bundle: substrate
 destination:
   plugin: 'entity:asset'
@@ -45,6 +45,19 @@ process:
         plugin: migration_lookup
         migration: farm_migrate_taxonomy_substrate_type
         source: tid
+  # Concatenate the 1.x quantity field data into Notes.
+  notes/0/value:
+    plugin: concat
+    source:
+      - quantity_summary
+      - field_farm_description/0/value
+  notes/0/format:
+    plugin: static_map
+    source: field_farm_description/0/format
+    map:
+      farm_format: default
+      plain_text: plain_text
+    default_value: default
 migration_dependencies:
   required:
     - farm_migrate_taxonomy_fungi_type
