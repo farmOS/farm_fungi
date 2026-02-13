@@ -2,16 +2,17 @@
 
 namespace Drupal\farm_fungi\Plugin\Asset\AssetType;
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\farm_entity\Attribute\AssetType;
 use Drupal\farm_entity\Plugin\Asset\AssetType\FarmAssetType;
 
 /**
  * Provides the fungi asset type.
- *
- * @AssetType(
- *   id = "fungi",
- *   label = @Translation("Fungi"),
- * )
  */
+#[AssetType(
+  id: 'fungi',
+  label: new TranslatableMarkup('Fungi'),
+)]
 class Fungi extends FarmAssetType {
 
   /**

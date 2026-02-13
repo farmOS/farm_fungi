@@ -7,5 +7,4 @@ dependencies:
 id: fungi
 label: Fungi
 description: ''
-workflow: asset_default
 new_revision: true

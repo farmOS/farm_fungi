@@ -16,6 +16,6 @@
       }
   ],
   "require": {
-      "farmos/farmos": "^2 || ^3"
+      "farmos/farmos": "^4"
   }
 }
